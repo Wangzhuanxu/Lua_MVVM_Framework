@@ -32,7 +32,7 @@ function UILoginViewModel:OnCreate()
         {sprite = "login2_05",txt = "456"},
         {sprite = "login2_05",txt = "789"},
     }
-
+    self.drop_value = BindableProperty.New(1)
     local list = {}
     for i = 1,100 do 
         list[#list + 1] = {

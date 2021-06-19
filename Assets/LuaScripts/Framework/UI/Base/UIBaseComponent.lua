@@ -30,7 +30,7 @@ function UIBaseComponent:__init(holder)
 end
 
 -- 析构函数：所有组件的子类不要再写这个函数，释放工作全部放到OnDestroy
-local function __delete(self)
+function UIBaseComponent:__delete()
 	self:OnDestroy()
 end
 

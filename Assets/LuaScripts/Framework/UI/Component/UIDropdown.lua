@@ -12,6 +12,7 @@ local OptionData = CS.UnityEngine.UI.Dropdown.OptionData
 local OptionList = CS.System.Collections.Generic.List(typeof(OptionData))
 local Resources = CS.UnityEngine.Resources
 local PropertiesHelper = require "Framework.UI.Wrapper.PropertiesHelper"
+local BindLevel = EnumConfig.BindLevel
 -- 创建
 function UIDropdown:OnCreate(item,binder)
 	base.OnCreate(self)
@@ -46,7 +47,7 @@ function UIDropdown:options(property_name)
             List:Add(p)
         end
 		self.unity_uidropdown.options = List
-	end,nil, property_name)
+	end,nil, property_name,BindLevel.High)
 	self:RecordProperty(_options)
 end
 
@@ -69,7 +70,7 @@ function UIDropdown:value(property_name)
 		return
 	end
     self.binder:Add(property_name, function (oldValue, newValue)
-        assert(self._length == 0,"you should set dropdown optionData first")
+        assert(self._length > 0,"you should set dropdown optionData first")
         assert(newValue < self._length, ("the index must < optionData Length"))
 		if oldValue ~= newValue then
 			self:SetValue(newValue)

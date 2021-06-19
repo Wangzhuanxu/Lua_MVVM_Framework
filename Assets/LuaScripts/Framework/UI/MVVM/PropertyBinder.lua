@@ -1,5 +1,5 @@
 local PropertyBinder = BaseClass("PropertyBinder")
-
+local BindLevel = EnumConfig.BindLevel
 -- 如非必要，别重写构造函数，使用OnCreate初始化
 function PropertyBinder:__init(view)
     self.view = view
@@ -44,14 +44,15 @@ function PropertyBinder:AddWithNotInit(name, valueChangedHandler)
     self:RegisterEvent(registerFunc, unregisterFunc, name)
 end
 
-function PropertyBinder:RegisterEvent(eventRegisterHandler, eventUnregisterHandler, name)
+function PropertyBinder:RegisterEvent(eventRegisterHandler, eventUnregisterHandler, name,bind_level)
     if eventRegisterHandler then 
         local bind = function(viewModel)
             currentPath = name
             local targetValue = self.GetProperty(viewModel, currentPath)
             eventRegisterHandler(viewModel, targetValue)
         end
-        table.insert(self._binders, bind)
+        bind_level = bind_level or BindLevel.Default
+        table.insert(self._binders, {func = bind,bind_level = bind_level})
     end
 
     if eventUnregisterHandler then
@@ -98,8 +99,11 @@ end
 
 function PropertyBinder:Bind(viewModel)
     if viewModel then
-        for _, binder in pairs(self._binders) do
-            binder(viewModel)
+        table.sort(self._binders,function(a,b)
+            return a.bind_level > b.bind_level
+        end)
+        for _, binder in ipairs(self._binders) do
+            binder.func(viewModel)
         end
     end
 end

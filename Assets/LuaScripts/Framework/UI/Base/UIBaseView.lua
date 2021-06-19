@@ -23,16 +23,16 @@ local _gen_keys =
 	[1] = function(names)
 		return format("_%s",table.unpack(names))
 	end,
-	[1] = function(names)
+	[2] = function(names)
 		return format("_%s%s",table.unpack(names))
 	end,
-	[1] = function(names)
+	[3] = function(names)
 		return format("_%s%s%s",table.unpack(names))
 	end,
-	[1] = function(names)
+	[4] = function(names)
 		return format("_%s%s%s%s",table.unpack(names))
 	end,
-	[1] = function(names)
+	[5] = function(names)
 		return format("_%s%s%s%s%s",table.unpack(names))
 	end,
 }
@@ -128,7 +128,7 @@ end
 function UIBaseView:_data_bind(property_names,func,changed_property_name)
 	if type(property_names) == "table" then
 		for _,name in pairs(property_names) do 
-			self.Binder:Add(property_names, function (oldValue, newValue)
+			self.Binder:Add(name, function (oldValue, newValue)
 				if oldValue ~= newValue then
 					if changed_property_name then
 						local viewModel = self:GetViewModel()
@@ -196,7 +196,7 @@ function UIBaseView:HBind(component_name,property_names,func)
 	local property_name = _gen_keys[#property_names](property_names)
 	local view_model = self:GetViewModel()
 	if not view_model[property_name] then
-		viewModel[property_name] = BindableProperty.New("")
+		view_model[property_name] = BindableProperty.New("")
 		self:_data_bind(property_names,func,property_name)
 	end
 	local name = names[2] or self:_get_component_defualt_property(names[1])
