@@ -45,7 +45,7 @@ function UIBaseView:__init(holder, var_arg, viewModel,view_type)
 	self.Binder = PropertyBinder.New(self)
 	self.viewModelProperty = BindableProperty.New()
 
-	if(viewModel~=nil) then
+	if(viewModel ~= nil) then
 		self.viewModelProperty.Value = viewModel
 	end
 
@@ -68,7 +68,6 @@ function UIBaseView:__init(holder, var_arg, viewModel,view_type)
 	--windowname
 	self.windowname = var_arg
 	self.view_type = view_type or ViewType.MainView
-	
 end
 
 local _main_view_canvas = "_main_view_canvas"
@@ -181,6 +180,12 @@ function UIBaseView:ListBind(component_name,property_name,view_class,list_count)
 	self:AddComponent(trans,UILIst,component_name, self.Binder,property_name,view_class,self,list_count)
 end
 
+function UIBaseView:ViewBind(component_name,property_name,view_class)
+	local item = self.items[component_name]
+	assert(not IsNull(item), ("%s is nil !"):format(component_name))
+	self:AddComponent(item,UISubView,component_name, self.Binder,property_name,view_class,self)
+end
+
 function UIBaseView:HBind(component_name,property_names,func)
 	assert(type(property_names) == "table","custom bind property_names must be a table")
 	local names = string.split(component_name, ".")
@@ -212,7 +217,6 @@ function UIBaseView:HBind(component_name,property_names,func)
 			end
 		end)
 	end
-	
 end
 ------------------------------------------------------bind end ----------------------
 
@@ -244,6 +248,7 @@ function UIBaseView:OnDestroy()
 end
 
 -----------------------------------other function,cant overrride -------
+-- 获取viewModel
 function UIBaseView:GetViewModel()
 	return self.viewModelProperty.Value
 end
@@ -260,36 +265,24 @@ function UIBaseView:OnBindingContextChanged(oldValue, newValue)
 
 end
 
--- 修改viewModel
-function UIBaseView:SetBindingContext(viewModel)
-	if viewModel~=nil then
-		self.viewModelProperty.Value = viewModel
-	end
-end
-
--- 获取viewModel
-function UIBaseView:GetBindingContext()
-	return self.viewModelProperty.Value
-end
-
 -- 激活、反激活
 function UIBaseView:SetActive(active)
 	if active then
-		self.gameObject:SetActive(active)
-			-- 启用更新函数
-		self:EnableUpdate(true)
 		if self.holder and self.has_canvas then
 			self.base_order = self.holder:PopWindowOder()
 		end
 		self:OnEnable()
 		base.OnEnable(self)
+		-- 启用更新函数
+		self:EnableUpdate(true)
+		self.gameObject:SetActive(active)
 	else
-		base.OnDisable(self)
 		-- 禁用更新函数
 		self:EnableUpdate(true)
 		if self.holder and self.has_canvas then
 			self.holder:PushWindowOrder()
 		end
+		base.OnDisable(self)
 		self:OnDisable()
 		self.gameObject:SetActive(active)
 	end

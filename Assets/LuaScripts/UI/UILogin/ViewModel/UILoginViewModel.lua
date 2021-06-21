@@ -1,25 +1,10 @@
---[[
--- added by wsh @ 2017-12-01
--- UILogin视图层
--- 注意：
--- 1、成员变量最好预先在__init函数声明，提高代码可读性
--- 2、OnEnable函数每次在窗口打开时调用，直接刷新
--- 3、组件命名参考代码规范
---]]
+
 
 local UILoginViewModel = BaseClass("UILoginViewModel",UIBaseViewModel)
 local base = UIBaseViewModel
-
+local UILoginSubViewModel = require "UI.UILogin.ViewModel.UILoginSubViewModel"
 
 function UILoginViewModel:OnCreate()
-    self.app_version_text = BindableProperty.New("1.0.1")
-    self.hp_image = BindableProperty.New("login2_05" )
-    self.input = BindableProperty.New("login2_05")
-
-    self.on_value_change = function(value)
-        print(("on_value_change_%s"):format(value))
-    end
-
     self.on_editor_end = function(value)
         print(("%s__%s"):format(value,value))
     end
@@ -54,21 +39,7 @@ function UILoginViewModel:OnCreate()
     end
     self.list = ObservableList.New(list)
 
-
-    self.hp_btn = function()
-    --     local count = self.list.Count
-    --     if count >= 6 then
-    --       --  self.list:Remove(0)
-    --     end
-    --     self.list:Add(
-    --        {
-    --             my_txt = BindableProperty.New(("%03d"):format(count)),
-    --             my_img = BindableProperty.New("login2_05" ),
-    --        }
-    --    )
-        print("you press me")
-    end
-
+    self.sub_view_model = self:CreateSubViewModel(UILoginSubViewModel)
 end
 
 function UILoginViewModel:OnEnable(txt)

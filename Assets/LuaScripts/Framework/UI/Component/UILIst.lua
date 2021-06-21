@@ -1,9 +1,4 @@
---[[
--- added by wsh @ 2017-12-08
--- Lua侧UIInput
--- 使用方式：
--- self.xxx_input = self:AddComponent(UILIst, var_arg)--添加孩子，各种重载方式查看UIBaseContainer
---]]
+
 
 local UILIst = BaseClass("UILIst", UIBaseComponent)
 local base = UIBaseComponent
@@ -126,7 +121,7 @@ function UILIst:_show_item(index,pos)
 	local model = self.data_list[index + 1]
 	local view = self.sub_views[index + 1]
 	if not view then
-		view = self.view_class.New(self.parent.holder, tostring(index), model,ViewType.SubView)
+		view = self.view_class.New(self.parent.holder, tostring(index), model,ViewType.ItemView)
 	end
 	local side = model.side or 0
 	side = side + 1

@@ -10,14 +10,10 @@
 local UILoginView = BaseClass("UILoginView", UIBaseView)
 local base = UIBaseView
 local UITestItemView = require "UI.UILogin.View.UITestItemView"
+local UILoginSubView = require "UI.UILogin.View.UILoginSubView"
 local function OnCreate(self)
 	base.OnCreate(self)
 	-- 初始化各个组件
-	self:Bind("my_txt.text", "app_version_text")
-	self:Bind("my_img.sprite", "hp_image")
-	self:Bind("my_btn", "hp_btn")
-	self:Bind("my_input.onValueChanged","on_value_change")
-	self:Bind("my_input","input")
 	self:Bind("my_tog","toggle")
 	self:Bind("my_slider","slider")
 	self:Bind("my_dd","my_dd")
@@ -29,20 +25,13 @@ local function OnCreate(self)
 	self:HBind("my_btn.visible",{"drop_value","toggle"},function(my_dd,toggle)
 		return my_dd == 1 and toggle
 	end)
+	self:ViewBind("sub_model","sub_view_model",UILoginSubView)
 end
 
 
 
 local function OnDestroy(self)
-	self.app_version_text = nil
-	self.res_version_text = nil
-	self.server_text = nil
-	self.account_input = nil
-	self.password_input = nil
-	self.server_select_btn = nil
-	self.login_btn = nil
 
-	base.OnDestroy(self)
 end
 
 UILoginView.OnCreate = OnCreate

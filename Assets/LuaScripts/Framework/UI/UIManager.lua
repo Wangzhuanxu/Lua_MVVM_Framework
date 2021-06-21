@@ -65,9 +65,6 @@ local function _init_ui_root(self)
 	end
 	self.unity_canvas.renderMode = CS.UnityEngine.RenderMode.ScreenSpaceCamera
 	self.unity_canvas.worldCamera = self.UICamera
----	self.unity_canvas.planeDistance = layer.PlaneDistance
----	self.unity_canvas.sortingLayerName = SortingLayerNames.UI
---	self.unity_canvas.sortingOrder = layer.OrderInLayer
 	
 	-- scaler
 	self.unity_canvas_scaler = UIUtil.FindComponent(self.transform, typeof(CS.UnityEngine.UI.CanvasScaler))

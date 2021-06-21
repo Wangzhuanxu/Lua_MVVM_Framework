@@ -41,7 +41,6 @@ TimeUtil = require "Framework.Util.TimeUtil"
 -- MVVM
 require "Framework.UI.MVVM.Bindable.BindableProperty"
 require "Framework.UI.MVVM.Bindable.ObservableList"
-require "Framework.UI.MVVM.Bindable.ComputeBindableProperty"
 PropertyBinder = require "Framework.UI.MVVM.PropertyBinder"
 
 -- ui base
@@ -58,6 +57,7 @@ UIDropdown = require "Framework.UI.Component.UIDropdown"
 UISlider = require "Framework.UI.Component.UISlider"
 UIInput = require "Framework.UI.Component.UIInput"
 UILIst = require "Framework.UI.Component.UILIst"
+UISubView = require "Framework.UI.Component.UISubView"
 UIToggle = require "Framework.UI.Component.UIToggle"
 UIButton = require "Framework.UI.Component.UIButton"
 UIToggleButton = require "Framework.UI.Component.UIToggleButton"
