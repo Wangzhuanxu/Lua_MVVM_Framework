@@ -50,7 +50,8 @@ end
 
 -- 添加组件
 function UIBaseContainer:AddComponent(item,component_target, component_name, binder, ...)
-	assert(component_target.__ctype == ClassType.class)
+	assert(component_target ~= nil,("component_name:%s"):format(component_name))
+	assert(component_target.__ctype == ClassType.class,("component_target:%s"):format(component_target.__cname))
 	local component_inst = nil
 	local component_class = nil
 	component_inst = component_target.New(self)
@@ -96,7 +97,6 @@ end
 -- 销毁
 function UIBaseContainer:Destroy()
 	self:Walk(function(component)
-		-- 说明：现在一个组件可以被多个容器持有，但是holder只有一个，所以由holder去释放
 		if component.holder == self then
 			component:Delete()
 		end

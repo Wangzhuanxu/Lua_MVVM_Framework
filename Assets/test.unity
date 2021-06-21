@@ -237,6 +237,18 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
+--- !u!114 &783882912 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 783882912, guid: 005f9e53b44372d41a2b6dd24ea5fe4a,
+    type: 3}
+  m_PrefabInstance: {fileID: 3375417091733713977}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1024652931
 GameObject:
   m_ObjectHideFlags: 0
@@ -372,6 +384,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!114 &1604578264 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1604578264, guid: 005f9e53b44372d41a2b6dd24ea5fe4a,
+    type: 3}
+  m_PrefabInstance: {fileID: 3375417091733713977}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1667110725
 GameObject:
   m_ObjectHideFlags: 0
@@ -811,6 +835,26 @@ PrefabInstance:
     - target: {fileID: 215059329, guid: 005f9e53b44372d41a2b6dd24ea5fe4a, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 653564640, guid: 005f9e53b44372d41a2b6dd24ea5fe4a, type: 3}
+      propertyPath: Items.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 653564640, guid: 005f9e53b44372d41a2b6dd24ea5fe4a, type: 3}
+      propertyPath: Items.Array.data[2].Value
+      value: 
+      objectReference: {fileID: 783882912}
+    - target: {fileID: 653564640, guid: 005f9e53b44372d41a2b6dd24ea5fe4a, type: 3}
+      propertyPath: Items.Array.data[2].Key
+      value: selected
+      objectReference: {fileID: 0}
+    - target: {fileID: 653564640, guid: 005f9e53b44372d41a2b6dd24ea5fe4a, type: 3}
+      propertyPath: Items.Array.data[3].Value
+      value: 
+      objectReference: {fileID: 1604578264}
+    - target: {fileID: 653564640, guid: 005f9e53b44372d41a2b6dd24ea5fe4a, type: 3}
+      propertyPath: Items.Array.data[3].Key
+      value: my_btn
       objectReference: {fileID: 0}
     - target: {fileID: 1191571685, guid: 005f9e53b44372d41a2b6dd24ea5fe4a, type: 3}
       propertyPath: m_AnchorMin.y

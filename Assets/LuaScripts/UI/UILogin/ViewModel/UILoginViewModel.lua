@@ -33,29 +33,42 @@ function UILoginViewModel:OnCreate()
         {sprite = "login2_05",txt = "789"},
     }
     self.drop_value = BindableProperty.New(1)
+
+    self.list_select_index = 1
     local list = {}
     for i = 1,100 do 
         list[#list + 1] = {
             my_txt = BindableProperty.New(("%03d"):format(i)),
             my_img = BindableProperty.New("login2_05" ),
+            selected = BindableProperty.New(self.list_select_index == i),
+            my_btn = function()
+                local my_list = self.list.Value
+                local pre = my_list[self.list_select_index]
+                local now = my_list[i]
+                print(("list = %d,now = %d"):format(self.list_select_index,i))
+                pre.selected.Value = false
+                now.selected.Value = true
+                self.list_select_index = i
+            end
         }
     end
     self.list = ObservableList.New(list)
+
+
     self.hp_btn = function()
-        local count = self.list.Count
-        if count >= 6 then
-          --  self.list:Remove(0)
-        end
-        self.list:Add(
-           {
-                my_txt = BindableProperty.New(("%03d"):format(count)),
-                my_img = BindableProperty.New("login2_05" ),
-           }
-       )
+    --     local count = self.list.Count
+    --     if count >= 6 then
+    --       --  self.list:Remove(0)
+    --     end
+    --     self.list:Add(
+    --        {
+    --             my_txt = BindableProperty.New(("%03d"):format(count)),
+    --             my_img = BindableProperty.New("login2_05" ),
+    --        }
+    --    )
+        print("you press me")
     end
 
--- 打开
-    base.OnEnable(self)
 end
 
 function UILoginViewModel:OnEnable(txt)

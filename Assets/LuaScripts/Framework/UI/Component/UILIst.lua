@@ -157,7 +157,7 @@ function UILIst:_hide_item(index)
 	side = side + 1
 	local go = view.gameObject
 	go:SetActive(false)
-	view:OnDestroy()
+	view:Delete()
 	self:_push_object_by_type(side,go)
 	self.sub_views[index + 1] = false
 end
@@ -171,7 +171,7 @@ function UILIst:_remove_item(index,model)
 		side = side + 1
 		local go = view.gameObject
 		go:SetActive(false)
-		view:OnDestroy()
+		view:Delete()
 		self:_push_object_by_type(side,go)
 	end
 	self.length = self.length - 1
@@ -188,7 +188,7 @@ end
 function UILIst:OnDestroy()
 	for _,view in pairs(self.sub_views) do 
 		if type(view) == "table" then
-			view:OnDestroy()
+			view:Delete()
 		end
 	end
 	self.sub_views = nil

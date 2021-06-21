@@ -7,7 +7,8 @@ function UITestItemView:OnCreate()
 	-- 初始化各个组件
 	self:Bind("my_txt.text", "my_txt")
 	self:Bind("my_img.sprite", "my_img")
-	-- 调用父类Bind所有属性
+	self:Bind("selected.visible", "selected")
+	self:Bind("my_btn", "my_btn")
 end
 
 
