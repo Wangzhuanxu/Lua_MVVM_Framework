@@ -6,7 +6,6 @@
 -- 窗口配置表 ={
 --		名字Name
 --		UI层级Layer
--- 		控制器类Controller
 --		模型类Model
 --		视图类View
 --		资源加载路径PrefabPath

@@ -1,0 +1,36 @@
+<%
+require "TemplateCommon"
+%>
+--[[
+-- 模型层
+-- 注意：
+-- 1、成员变量预先在OnCreate、OnEnable函数声明，提高代码可读性
+-- 2、OnCreate内放窗口生命周期内保持的成员变量，窗口销毁时才会清理
+-- 3、OnEnable内放窗口打开时才需要的成员变量，窗口关闭后及时清理
+--]]
+
+local <%=viewmodel_class_name%> = BaseClass("<%=viewmodel_class_name%>", UIBaseViewModel)
+local base = UIBaseViewModel
+
+-- 创建
+function <%=viewmodel_class_name%>:OnCreate()
+    --self.toggle = BindableProperty.New(true)
+    --self.slider = BindableProperty.New(0.2)
+end
+
+-- 打开,可以传递一些需要的参数
+function <%=viewmodel_class_name%>:OnEnable(...)
+
+end
+
+-- 关闭
+function <%=viewmodel_class_name%>:OnDisable()
+
+end
+
+-- 销毁
+function <%=viewmodel_class_name%>:OnDestroy()
+
+end
+
+return <%=viewmodel_class_name%>
