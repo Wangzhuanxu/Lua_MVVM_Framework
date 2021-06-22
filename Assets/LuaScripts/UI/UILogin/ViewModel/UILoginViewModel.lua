@@ -21,7 +21,7 @@ function UILoginViewModel:OnCreate()
 
     self.list_select_index = 1
     local list = {}
-    for i = 1,100 do 
+    for i = 1,49 do 
         list[#list + 1] = {
             my_txt = BindableProperty.New(("%03d"):format(i)),
             my_img = BindableProperty.New("login2_05" ),

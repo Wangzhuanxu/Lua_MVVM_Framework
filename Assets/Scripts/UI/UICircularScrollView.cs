@@ -371,12 +371,60 @@ namespace Framework
             UpdateCheck();
         }
 
+        // private void UpdateCheck()
+        // {
+        //     if (m_CellInfos == null)
+        //         return;
+        //     var first = false;
+        //     var second = false;
+        //     //检查超出范围
+        //     for (int i = 0, length = m_CellInfos.Length; i < length; i++)
+        //     {
+        //         var cellInfo = m_CellInfos[i];
+        //         //  GameObject obj = cellInfo.obj;
+        //         var pos = cellInfo.pos;
+        //
+        //         var rangePos = m_Direction == e_Direction.Vertical ? pos.y : pos.x;
+        //         //判断是否超出显示范围
+        //         if (IsOutRange(rangePos))
+        //         {
+        //             //把超出范围的cell 扔进 poolsObj里
+        //             if (!cellInfo.isEmpty)
+        //             {
+        //                 m_HideFunc(i);
+        //                 cellInfo.isEmpty = true;
+        //             }
+        //             else
+        //             {
+        //                 if (first) second = true;
+        //             }
+        //         }
+        //         else
+        //         {
+        //             //优先从 poolsObj中 取出 （poolsObj为空则返回 实例化的cell）
+        //             //GameObject cell = GetPoolsObj();
+        //             // cell.transform.localPosition = pos;
+        //             // cell.gameObject.name = i.ToString();
+        //             // m_CellInfos[i].obj = cell;
+        //             if (cellInfo.isEmpty)
+        //             {
+        //                 cellInfo.isEmpty = m_ShowFunc(i, pos);
+        //                 ;
+        //             }
+        //
+        //             first = true;
+        //         }
+        //
+        //         if (first && second) break;
+        //     }
+        // }
+        
+        List<int> show_list = new List<int>(100);
         private void UpdateCheck()
         {
             if (m_CellInfos == null)
                 return;
-            var first = false;
-            var second = false;
+            show_list.Clear();
             //检查超出范围
             for (int i = 0, length = m_CellInfos.Length; i < length; i++)
             {
@@ -394,28 +442,24 @@ namespace Framework
                         m_HideFunc(i);
                         cellInfo.isEmpty = true;
                     }
-                    else
-                    {
-                        if (first) second = true;
-                    }
                 }
                 else
                 {
-                    //优先从 poolsObj中 取出 （poolsObj为空则返回 实例化的cell）
-                    //GameObject cell = GetPoolsObj();
-                    // cell.transform.localPosition = pos;
-                    // cell.gameObject.name = i.ToString();
-                    // m_CellInfos[i].obj = cell;
                     if (cellInfo.isEmpty)
                     {
-                        cellInfo.isEmpty = m_ShowFunc(i, pos);
-                        ;
+                       // cellInfo.isEmpty = m_ShowFunc(i, pos);
+                       show_list.Add(i);
                     }
-
-                    first = true;
+                    
                 }
+            }
 
-                if (first && second) break;
+            for (int j = 0; j < show_list.Count; j++)
+            {
+                var i = show_list[j];
+                var cellInfo = m_CellInfos[i];
+                var pos = cellInfo.pos;
+                cellInfo.isEmpty = m_ShowFunc(i, pos);
             }
         }
 

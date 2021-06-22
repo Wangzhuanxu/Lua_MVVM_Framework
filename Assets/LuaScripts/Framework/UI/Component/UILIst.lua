@@ -107,7 +107,7 @@ end
 
 function UILIst:_push_object_by_type(t,obj)
 	if not self.obj_pool[t] then 
-		self.obj_pool[t] = setmetatable({}, {__mode = "v"})
+		self.obj_pool[t] = {}--setmetatable({}, {__mode = "v"})
 	end
 	table.insert(self.obj_pool[t],obj)
 end
