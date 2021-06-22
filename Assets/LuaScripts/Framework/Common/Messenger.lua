@@ -22,7 +22,7 @@ local function __init(self)
 end
 
 local function __delete(self)
-	self.events = nil	
+	self:Cleanup()	
 end
 
 local function AddListener(self, e_type, func,obj)
@@ -56,7 +56,7 @@ local function RemoveListenerByType(self, e_type)
 end
 
 local function Cleanup(self)
-	self.events = {};
+	self.events = nil
 end
 
 Messenger.__init = __init

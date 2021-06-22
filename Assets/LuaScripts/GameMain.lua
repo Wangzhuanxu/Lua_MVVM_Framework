@@ -77,6 +77,7 @@ local function OnApplicationQuit()
 	-- 模块注销
 	UpdateManager:GetInstance():Dispose()
 	TimerManager:GetInstance():Dispose()
+	UIManager:GetInstance():Dispose()
 	--LogicUpdater:GetInstance():Dispose()
 	--NetManager:GetInstance():Dispose()
 

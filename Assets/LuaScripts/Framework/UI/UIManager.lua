@@ -344,7 +344,7 @@ end
 local function InnerDestroyWindow(self, ui_name, target, include_keep_model)
 	self:Broadcast(UIMessageNames.UIFRAME_ON_WINDOW_DESTROY, target)
 	-- 说明：一律缓存，如果要真的清理，那是清理缓存时需要管理的功能
-	GameObjectPool:GetInstance():RecycleGameObject(self.windows[ui_name].PrefabPath, target.View.gameObject)
+--	GameObjectPool:GetInstance():RecycleGameObject(self.windows[ui_name].PrefabPath, target.View.gameObject)
 	if include_keep_model then
 		self.keep_model[ui_name] = nil
 		InnerDelete(target.ViewModel)
@@ -538,13 +538,21 @@ end
 
 -- 析构函数
 local function __delete(self)
+	self:DestroyAllWindow(true)
+	self.ui_message_center:Delete()
 	self.ui_message_center = nil
 	self.windows = nil
 	self.layers = nil
 	self.keep_model = nil
+	self.__window_stack = nil
+end
+
+local function Dispose(self)
+	self:Delete()
 end
 
 UIManager.__init = __init
+UIManager.__delete = __delete
 UIManager.AddListener = AddListener
 UIManager.Broadcast = Broadcast
 UIManager.RemoveListener = RemoveListener
@@ -575,6 +583,6 @@ UIManager.CloseTip = CloseTip
 UIManager.OpenLastLeaveSceneWindow = OpenLastLeaveSceneWindow
 UIManager.GetLayer = GetLayer
 UIManager.LeaveSceneSave = LeaveSceneSave
-UIManager.__delete = __delete
+UIManager.Dispose = Dispose
 
 return UIManager;

@@ -86,7 +86,7 @@ end
 
 -- 销毁
 function UIInput:OnDestroy()
-	self.unity_uiinput.onEditEnd:RemoveAllListeners()
+	self.unity_uiinput.onEndEdit:RemoveAllListeners()
 	self.unity_uiinput.onValueChanged:RemoveAllListeners()
 
 	self.unity_uiinput = nil
