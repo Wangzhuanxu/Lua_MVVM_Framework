@@ -11,6 +11,7 @@
 		<type fullname="Framework.GameUtility" preserve="all"/>
 		<type fullname="Framework.Manifest" preserve="all"/>
 		<type fullname="Framework.UICircularScrollView" preserve="all"/>
+		<type fullname="Game.HotFixTest" preserve="all"/>
 		
 	</assembly>
 

@@ -45,7 +45,7 @@ end
 --主入口函数。从这里开始lua逻辑
 local function Start()
 	print("GameMain start...")
-	
+	print("xlua.private_accessible ===",xlua.private_accessible)
 	-- 模块启动
 	UpdateManager:GetInstance():Startup()
 	TimerManager:GetInstance():Startup()

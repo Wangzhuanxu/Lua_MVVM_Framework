@@ -33,7 +33,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0.00009630267}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &98054385
@@ -2212,7 +2212,7 @@ MonoBehaviour:
   m_IsShowArrow: 0
   m_PointingEndArrow: {fileID: 0}
   m_PointingFirstArrow: {fileID: 0}
-  m_Row: 3
+  m_Row: 2
   m_Spacing: 10
 --- !u!1 &2091471093
 GameObject:

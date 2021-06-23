@@ -260,6 +260,9 @@ namespace XLua.CSObjectWrap
             translator.DelayWrapLoader(typeof(Framework.UICircularScrollView), FrameworkUICircularScrollViewWrap.__Register);
         
         
+            translator.DelayWrapLoader(typeof(Game.HotFixTest), GameHotFixTestWrap.__Register);
+        
+        
         
         }
         

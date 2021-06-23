@@ -26,6 +26,11 @@ function UIDropdown:OnCreate(item,binder)
 end
 
 --参考自 table 和list,dictionary可以互转https://github.com/Tencent/xLua/issues/495
+-- 直接local array = { 2, 3, 3}
+-- 不用特意的去“转”，你要传给C#时直接传这个table，会自动转到 List、Array、Dictionary 等 C# 类型
+-- 总之，结构上一致就自动转。
+-- 不建议在lua那转成 Array、List 然后去调用C#方法，性能比较低。
+-- 尽量在lua操作table，然后一次赋值过去。
 local _options = "options"
 function UIDropdown:options(property_name)
 	if self:IsBinded(_options) then

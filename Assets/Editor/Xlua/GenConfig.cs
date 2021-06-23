@@ -4,6 +4,7 @@ using UnityEngine;
 using XLua;
 using System.Reflection;
 using Framework;
+using Game;
 using UnityEngine.UI;
 
 public static class GenConfig
@@ -114,12 +115,10 @@ public static class GenConfig
         typeof(System.GC),
         typeof(Manifest),
         typeof(List<Dropdown.OptionData>),
-        typeof(UICircularScrollView)
-
-        // typeof(HjTcpNetwork),
-        // typeof(UIDrag),
-        // typeof(GameChannel.ChannelManager),
-        // typeof(GameChannel.BaseChannel),
+        typeof(UICircularScrollView),
+        
+        //测试脚本
+        typeof(HotFixTest),
 
     };
 
@@ -153,6 +152,12 @@ public static class GenConfig
         // typeof(HedgehogTeam.EasyTouch.EasyTouch.SwipeEndHandler),
         // typeof(HedgehogTeam.EasyTouch.EasyTouch.TouchStartHandler),
         // typeof(HedgehogTeam.EasyTouch.EasyTouch.TouchUpHandler),
+    };
+    
+    [Hotfix]
+    public static List<Type> Hotfix = new List<Type>()
+    {
+	    typeof(HotFixTest),
     };
 
 	//黑名单
