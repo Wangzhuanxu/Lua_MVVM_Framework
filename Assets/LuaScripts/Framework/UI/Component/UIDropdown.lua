@@ -9,7 +9,7 @@ local base = UIBaseComponent
 local error = error
 local assert = assert
 local OptionData = CS.UnityEngine.UI.Dropdown.OptionData
-local OptionList = CS.System.Collections.Generic.List(typeof(OptionData))
+--local OptionList = CS.System.Collections.Generic.List(typeof(OptionData))
 local Resources = CS.UnityEngine.Resources
 local PropertiesHelper = require "Framework.UI.Wrapper.PropertiesHelper"
 local BindLevel = EnumConfig.BindLevel
@@ -25,6 +25,7 @@ function UIDropdown:OnCreate(item,binder)
 	assert(not IsNull(self.unity_uidropdown), "Err : unity_uidropdown nil!")
 end
 
+--参考自 table 和list,dictionary可以互转https://github.com/Tencent/xLua/issues/495
 local _options = "options"
 function UIDropdown:options(property_name)
 	if self:IsBinded(_options) then
@@ -34,7 +35,8 @@ function UIDropdown:options(property_name)
     self.binder:RegisterEvent(function(viewModel, property)
         assert(type(property) == "table","dropdown need table as optionData!")
         self._length = #property
-        local List = OptionList(self._length)
+        --local List = OptionList(self._length)
+		local list = {}
         for index,option in ipairs(property) do 
             local sprite 
             if option.sprite and option.sprite ~= "" then
@@ -44,9 +46,10 @@ function UIDropdown:options(property_name)
             end
             local txt = option.txt or tostring(index)
             local p = OptionData(txt,sprite)
-            List:Add(p)
+           -- List:Add(p)
+			list[#list + 1] = p
         end
-		self.unity_uidropdown.options = List
+		self.unity_uidropdown.options = list
 	end,nil, property_name,BindLevel.High)
 	self:RecordProperty(_options)
 end
