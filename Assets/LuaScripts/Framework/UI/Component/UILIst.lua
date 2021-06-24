@@ -181,6 +181,7 @@ end
 
 -- 销毁
 function UILIst:OnDestroy()
+	self.scroll_view:DisposeAll()
 	for _,view in pairs(self.sub_views) do 
 		if type(view) == "table" then
 			view:Delete()

@@ -16,6 +16,7 @@ local function Func(self)
 end
 
 local function Add(self,a,b)
+	self:Add(a + 1,b + 1)
 	print("lua add = ",a + b)
 end
 

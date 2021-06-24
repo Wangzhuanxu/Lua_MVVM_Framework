@@ -30,7 +30,7 @@ namespace Framework
                TestHotfix();
                XLuaManager.Instance.Startup();
                XLuaManager.Instance.OnInit();
-               XLuaManager.Instance.StartHotfix();
+             //  XLuaManager.Instance.StartHotfix();
                Debug.Log(string.Format("XLuaManager StartHotfix use {0}ms", (DateTime.Now - start).Milliseconds));
         
                yield return StartGame();

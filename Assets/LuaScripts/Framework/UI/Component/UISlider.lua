@@ -17,7 +17,7 @@ function UISlider:OnCreate(item,binder)
 	self.view = binder:GetView()
 	self.binder = binder
 	self.view_model = self.view:GetViewModel()
-	assert(not IsNull(self.unity_uislider), "Err : unity_toggle nil!")
+	assert(not IsNull(self.unity_uislider), "Err : unity_uislider nil!")
 
 end
 
@@ -68,8 +68,11 @@ end
 
 -- 销毁
 function UISlider:OnDestroy()
-	self.unity_uislider.onValueChanged:RemoveAllListeners()
-	self.unity_uislider = nil
+	if self.unity_uislider then
+		self.unity_uislider.onValueChanged:RemoveAllListeners()
+		self.unity_uislider.onValueChanged = nil
+		self.unity_uislider = nil
+	end
 	base.OnDestroy(self)
 end
 

@@ -66,8 +66,11 @@ end
 
 -- 销毁
 function UIToggle:OnDestroy()
-	self.unity_toggle.onValueChanged:RemoveAllListeners()
-	self.unity_toggle = nil
+	if self.unity_toggle then
+		self.unity_toggle.onValueChanged:RemoveAllListeners()
+		self.unity_toggle.onValueChanged = nil
+		self.unity_toggle = nil
+	end
 	base.OnDestroy(self)
 end
 

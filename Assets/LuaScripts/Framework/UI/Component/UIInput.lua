@@ -86,10 +86,13 @@ end
 
 -- 销毁
 function UIInput:OnDestroy()
-	self.unity_uiinput.onEndEdit:RemoveAllListeners()
-	self.unity_uiinput.onValueChanged:RemoveAllListeners()
-
-	self.unity_uiinput = nil
+	if self.unity_uiinput then
+		self.unity_uiinput.onEndEdit:RemoveAllListeners()
+		self.unity_uiinput.onValueChanged:RemoveAllListeners()
+		self.unity_uiinput.onEndEdit = nil
+		self.unity_uiinput.onValueChanged = nil
+		self.unity_uiinput = nil
+	end
 	base.OnDestroy(self)
 end
 

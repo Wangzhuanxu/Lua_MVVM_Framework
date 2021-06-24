@@ -161,7 +161,7 @@ function UIBaseView:Bind(component_name,property_name)
 		local c_sharp_type = item:GetType():ToString()
 		local component_class = C2LuaType[c_sharp_type]
 		assert(component_class ~= nil, ("%s dont have component_class!"):format(c_sharp_type))
-		component = self:AddComponent(item,component_class,component_name, self.Binder)
+		component = self:AddComponent(item,component_class,names[1], self.Binder)
 	end
 	local name = names[2] or self:_get_component_defualt_property(names[1])
 	local p = component[name]
@@ -195,7 +195,7 @@ function UIBaseView:HBind(component_name,property_names,func)
 		local c_sharp_type = item:GetType():ToString()
 		local component_class = C2LuaType[c_sharp_type]
 		assert(component_class ~= nil, ("%s dont have component_class!"):format(c_sharp_type))
-		component = self:AddComponent(item,component_class,component_name, self.Binder)
+		component = self:AddComponent(item,component_class,names[1], self.Binder)
 	end
 	-- gen temp property
 	local property_name = _gen_keys[#property_names](property_names)

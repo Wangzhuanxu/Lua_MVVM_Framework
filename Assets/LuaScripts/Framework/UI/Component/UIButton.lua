@@ -47,9 +47,12 @@ end
 
 -- 资源释放
 function UIButton:OnDestroy()
-	self.unity_uibutton.onClick:RemoveAllListeners()
-	self.unity_uibutton = nil
-	self.__onclick = nil
+	if self.unity_uibutton then
+		self.unity_uibutton.onClick:RemoveAllListeners()
+		self.unity_uibutton = nil
+		self.__onclick = nil
+	end
+
 	base.OnDestroy(self)
 end
 

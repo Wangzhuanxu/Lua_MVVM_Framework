@@ -108,8 +108,12 @@ end
 
 -- 销毁
 function UIDropdown:OnDestroy()
-	self.unity_uidropdown.onValueChanged:RemoveAllListeners()
-	self.unity_uidropdown = nil
+	if self.unity_uidropdown then
+		self.unity_uidropdown.onValueChanged:RemoveAllListeners()
+		self.unity_uidropdown.onValueChanged = nil
+		self.unity_uidropdown = nil
+	end
+
 	base.OnDestroy(self)
 end
 

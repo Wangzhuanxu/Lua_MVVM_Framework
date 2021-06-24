@@ -24,6 +24,10 @@ local function Stop()
 		local hotfix_module = require(v)
 		hotfix_module.Unregister()
 	end
+	if Config.Debug then
+		local util = require "XLua.Common.util"
+		util.print_func_ref_by_csharp()
+	end
 end
 
 HotfixMain.modules = modules

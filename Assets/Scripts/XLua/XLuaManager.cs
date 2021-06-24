@@ -70,10 +70,10 @@ namespace Framework
                     luaUpdater = gameObject.AddComponent<LuaUpdater>();
                 }
                 luaUpdater.OnInit(luaEnv);
-    #if UNITY_EDITOR
-                UnityEditor.EditorApplication.playModeStateChanged -= OnEditorPalyModeChanged;
-                UnityEditor.EditorApplication.playModeStateChanged += OnEditorPalyModeChanged;
-    #endif
+    // #if UNITY_EDITOR
+    //             UnityEditor.EditorApplication.playModeStateChanged -= OnEditorPalyModeChanged;
+    //             UnityEditor.EditorApplication.playModeStateChanged += OnEditorPalyModeChanged;
+    // #endif
             }
         }
 
@@ -87,17 +87,18 @@ namespace Framework
             InitLuaEnv();
             OnInit();
         }
-#if UNITY_EDITOR
-        private void OnEditorPalyModeChanged(UnityEditor.PlayModeStateChange state)
-        {
-            //点击编辑器停止的时候调用
-            if(state == UnityEditor.PlayModeStateChange.ExitingPlayMode)
-            {
-                UnityEditor.EditorApplication.playModeStateChanged -= OnEditorPalyModeChanged;
-                Exit();
-            }
-        }
-#endif
+        
+// #if UNITY_EDITOR
+//         private void OnEditorPalyModeChanged(UnityEditor.PlayModeStateChange state)
+//         {
+//             //点击编辑器停止的时候调用
+//             if(state == UnityEditor.PlayModeStateChange.ExitingPlayMode)
+//             {
+//                 UnityEditor.EditorApplication.playModeStateChanged -= OnEditorPalyModeChanged;
+//                 Exit();
+//             }
+//         }
+// #endif
         public void SafeDoString(string scriptContent)
         {
             if (luaEnv != null)
@@ -190,7 +191,7 @@ namespace Framework
             {
                 luaEnv.Tick();
     
-                if (Time.frameCount % 1000 == 0)
+                if (Time.frameCount % 5000 == 0)
                 {
                     luaEnv.FullGc();
                 }
@@ -206,7 +207,10 @@ namespace Framework
         {
             if (luaEnv != null && HasGameStart)
             {
+               // StopHotfix();
                 SafeDoString("GameMain.OnApplicationQuit()");
+                Dispose();
+                Debug.Log("lua env has been disposed");
                 HasGameStart = false;
             }
         }
@@ -231,6 +235,7 @@ namespace Framework
                 }
             }
         }
+        
     }
 
 }
