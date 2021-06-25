@@ -18,14 +18,11 @@ public class UIMVVMGenEditor : EditorWindow
 
     private static Object modulePathObj = null;
     private static UILayers_TYPE mLayerType;
-
-    private static string scrollViewName = "Test";
+    
     private static Vector2Int widthHeight = new Vector2Int(500, 200);
     private static Vector2Int cellWH = new Vector2Int(100, 50);
-    private static bool horizontal = true;
-    private static bool vertical = false;
 
-   // [MenuItem("NICELua/MVVM")]
+    // [MenuItem("NICELua/MVVM")]
     static void Init()
     {
         EditorWindow window =  GetWindow(typeof(UIMVVMGenEditor));

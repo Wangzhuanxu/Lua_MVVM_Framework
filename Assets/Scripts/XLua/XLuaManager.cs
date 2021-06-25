@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System.Collections.Generic;
+using System.IO;
 using System.Text;
 using UnityEngine;
 using XLua;
@@ -16,8 +17,13 @@ using XLua;
 namespace Framework
 {
     public class XLuaManager : MonoSingleton<XLuaManager>
-    {   
-    
+    {
+        public static HashSet<string> classLibrary = new HashSet<string>()
+        {
+            "protoc"
+        };
+
+        public const string classLibraryName = "Common/Library";
         public const string luaAssetbundleAssetName = "Lua";
         public const string luaScriptsFolder = "LuaScripts";
         const string commonMainScriptName = "Common.Main";
@@ -49,7 +55,7 @@ namespace Framework
             if (luaEnv != null)
             {
                 luaEnv.AddLoader(CustomLoader);
-                // luaEnv.AddBuildin("pb", XLua.LuaDLL.Lua.LoadPb);
+                luaEnv.AddBuildin("pb", XLua.LuaDLL.Lua.LoadLuaProfobuf);
                 // luaEnv.AddBuildin("cjson", XLua.LuaDLL.Lua.LoadRapidJson);
             }
             else
@@ -163,6 +169,10 @@ namespace Framework
         public static byte[] CustomLoader(ref string filepath)
         {
             StringBuilder scriptPath = new StringBuilder();
+            if (classLibrary.Contains(filepath))
+            {
+                scriptPath.Append(classLibraryName).Append("/");
+            }
             scriptPath.Append(filepath.Replace(".", "/")).Append(".lua");
     
 #if UNITY_EDITOR
@@ -215,7 +225,7 @@ namespace Framework
             }
         }
     
-        public void Dispose()
+        public override void Dispose()
         {
             if (luaUpdater != null)
             {

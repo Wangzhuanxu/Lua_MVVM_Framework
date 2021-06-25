@@ -16,14 +16,14 @@
 	</assembly>
 
 	<assembly fullname="UnityEngine.CoreModule">
-	    <type fullname="UnityEngine.Object" preserve="all"/>
+	    <type fullname="UnityEngine.TextAsset" preserve="all"/>
+		<type fullname="UnityEngine.Object" preserve="all"/>
 		<type fullname="UnityEngine.Ray2D" preserve="all"/>
 		<type fullname="UnityEngine.GameObject" preserve="all"/>
 		<type fullname="UnityEngine.Component" preserve="all"/>
 		<type fullname="UnityEngine.Behaviour" preserve="all"/>
 		<type fullname="UnityEngine.Transform" preserve="all"/>
 		<type fullname="UnityEngine.Resources" preserve="all"/>
-		<type fullname="UnityEngine.TextAsset" preserve="all"/>
 		<type fullname="UnityEngine.Keyframe" preserve="all"/>
 		<type fullname="UnityEngine.Camera" preserve="all"/>
 		<type fullname="UnityEngine.AnimationCurve" preserve="all"/>

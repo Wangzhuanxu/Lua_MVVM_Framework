@@ -32,7 +32,6 @@ public static class GenConfig
         typeof(ParticleSystem),
         typeof(SkinnedMeshRenderer),
         typeof(Renderer),
-        typeof(WWW),
         typeof(List<int>),
         typeof(Action<string>),
         typeof(UnityEngine.Debug),

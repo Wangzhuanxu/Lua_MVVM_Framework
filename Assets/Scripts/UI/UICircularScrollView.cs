@@ -80,7 +80,6 @@ namespace Framework
         private Func<int, Vector3, bool> m_ShowFunc;
 
         public float m_Spacing; //间距
-        private int MaxSize = 100;
 
         private RectTransform rectTrans;
 
