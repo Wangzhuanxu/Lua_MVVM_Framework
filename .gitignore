@@ -345,7 +345,7 @@ ASALocalRun/
 [Bb]uild/
 [Bb]uilds/
 Assets/AssetStoreTools*
-
+.lpproj
 # Visual Studio cache directory
 .vs/
 

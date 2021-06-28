@@ -1,0 +1,5 @@
+syntax = "proto3";
+package Data.PB;
+
+import public "net/log2.proto";
+import public "net/log.proto";
