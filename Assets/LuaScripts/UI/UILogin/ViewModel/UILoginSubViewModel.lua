@@ -9,7 +9,7 @@ function UILoginViewModel:OnCreate()
     self.hp_image = BindableProperty.New("login2_05" )
     self.input = BindableProperty.New("login2_05")
     self.on_value_change = function(value)
-        print(("on_value_change_%s"):format(value))
+       -- print(("on_value_change_%s"):format(value))
     end
 
     self.hp_btn = function()

@@ -45,8 +45,8 @@ function UIDropdown:options(property_name)
         for index,option in ipairs(property) do 
             local sprite 
             if option.sprite and option.sprite ~= "" then
-                local path = ("sprite path is %s"):format(option.sprite)
-                print(path)
+               -- local path = ("sprite path is %s"):format(option.sprite)
+          --      print(path)
                 sprite = Resources.Load(option.sprite,typeof(CS.UnityEngine.Sprite))
             end
             local txt = option.txt or tostring(index)

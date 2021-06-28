@@ -45,9 +45,9 @@ namespace Framework
 
           void TestHotfix()
           {
-               HotFixTest h = new HotFixTest();
-               h.Add(1,3);
-               h.Func();
+               // HotFixTest h = new HotFixTest();
+               // h.Add(1,3);
+               // h.Func();
           }
 
      }

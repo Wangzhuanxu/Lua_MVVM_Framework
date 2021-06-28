@@ -15,6 +15,9 @@ require "Framework.Common.BaseClass"
 require "Framework.Common.DataClass"
 require "Framework.Common.ConstClass"
 
+--加载net
+require("Net.init")
+
 -- 创建全局模块
 Config = require "Global.Config"
 EnumConfig = require "Global.EnumConfig"

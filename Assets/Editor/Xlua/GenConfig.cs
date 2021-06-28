@@ -102,8 +102,8 @@ public static class GenConfig
         // typeof(ETCJoystick),
   
         // 场景、资源加载
-        typeof(UnityEngine.Resources),
-        typeof(UnityEngine.ResourceRequest),
+        // typeof(UnityEngine.Resources),
+        // typeof(UnityEngine.ResourceRequest),
         typeof(UnityEngine.SceneManagement.SceneManager),
         typeof(AsyncOperation),
         
@@ -118,6 +118,9 @@ public static class GenConfig
         
         //测试脚本
         typeof(HotFixTest),
+        
+        //游戏
+        typeof(LuaUtility)
 
     };
 

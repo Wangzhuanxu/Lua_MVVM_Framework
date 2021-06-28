@@ -20,7 +20,7 @@ local function OnCreate(self)
 	self:Bind("my_dd.value","drop_value")
 	self:ListBind("my_content","list",UITestItemView)
 	self:DataBind({"drop_value","toggle"},function(drop_value,my_tog)
-		print("-------------------------------------------------",drop_value,my_tog)
+	--	print("-------------------------------------------------",drop_value,my_tog)
 	end)
 	self:HBind("my_btn.visible",{"drop_value","toggle"},function(my_dd,toggle)
 		return my_dd == 1 and toggle

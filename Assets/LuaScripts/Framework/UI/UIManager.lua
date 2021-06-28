@@ -212,8 +212,8 @@ local function InnerOpenWindow(self, target, ...)
 		local params = SafePack(...)
 
 		local Resources = CS.UnityEngine.Resources
-		local path = ("path is %s"):format(target.PrefabPath)
-		print(path)
+		--local path = ("path is %s"):format(target.PrefabPath)
+		--print(path)
 		local prefab = Resources.Load(target.PrefabPath,typeof(GameObject))
 		if IsNull(prefab) then
 			return
