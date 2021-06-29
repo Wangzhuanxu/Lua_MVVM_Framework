@@ -1,1 +1,2 @@
-https://www.jianshu.com/p/e87c3c753aa4
+protc编译命令：https://www.jianshu.com/p/e87c3c753aa4
+protc编译插件（编译完proto文件后，进行处理）：https://tunsuy.github.io/2017/02/20/%E4%B8%BAProtobuf%E7%BC%96%E8%AF%91%E5%99%A8protoc%E7%BC%96%E5%86%99%E6%8F%92%E4%BB%B6/
