@@ -37,10 +37,10 @@ function test()
     -- -- 再解码回Lua表
     -- local data2 = assert(pb.decode("Data.PB.Phone", bytes))
     -- print(data2)
-    local pb_data = LuaUtility.LoadProtoBufFileBinary("Net/9.data")
-        local v1,v2,v3 = pb.unpack(pb_data, "s@")
-	 v1,v2,v3 = pb.unpack(pb_data, "s@")
-    print("-----",pb.unpack(pb_data, "ss@"))
+    -- local pb_data = LuaUtility.LoadProtoBufFileBinary("Net/9.data")
+    --     local v1,v2,v3 = pb.unpack(pb_data, "s@")
+	--  v1,v2,v3 = pb.unpack(pb_data, "s@")
+    -- print("-----",pb.unpack(pb_data, "ss@"))
 end
 
 test()

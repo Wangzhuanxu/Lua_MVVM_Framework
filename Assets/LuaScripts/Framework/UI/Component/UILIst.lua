@@ -155,6 +155,7 @@ function UILIst:_hide_item(index)
 	view:Delete()
 	self:_push_object_by_type(side,go)
 	self.sub_views[index + 1] = false
+	print("Destroy----------------------------------------------------------")
 end
 
 function UILIst:_remove_item(index,model)
