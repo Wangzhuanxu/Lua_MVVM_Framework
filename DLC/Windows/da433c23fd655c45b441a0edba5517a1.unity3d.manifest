@@ -1,0 +1,45 @@
+ManifestFileVersion: 0
+CRC: 3765369704
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: f2fc02f15a28e7bf6577615dbbfc0a3a
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 9e6ad29cbd2df8fbe1a15315db0e51ab
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+Assets:
+- Assets/AssetsPackage/Demo/UI/4Levels/checkbox_nul.png
+- Assets/AssetsPackage/Demo/UI/4Levels/Icon_Lock0.png
+- Assets/AssetsPackage/Demo/UI/4Levels/Level star_Gray.png
+- Assets/AssetsPackage/Demo/UI/4Levels/Btn_Level1_p.png
+- Assets/AssetsPackage/Demo/UI/4Levels/Icon_Role.png
+- Assets/AssetsPackage/Demo/UI/4Levels/Progress-bar_Energy.png
+- Assets/AssetsPackage/Demo/UI/4Levels/Btn_GoBack1_p.png
+- Assets/AssetsPackage/Demo/UI/4Levels/Btn_GoBack2_h.png
+- Assets/AssetsPackage/Demo/UI/4Levels/Btn_Level2_h.png
+- Assets/AssetsPackage/Demo/UI/4Levels/bg_RoleDown.png
+- Assets/AssetsPackage/Demo/UI/4Levels/Progress-bar_life.png
+- Assets/AssetsPackage/Demo/UI/4Levels/Icon_star0.png
+- Assets/AssetsPackage/Demo/UI/4Levels/Btn_GoBack1_h.png
+- Assets/AssetsPackage/Demo/UI/4Levels/Btn_Level Locked.png
+- Assets/AssetsPackage/Demo/UI/4Levels/Btn_GoBack2_n.png
+- Assets/AssetsPackage/Demo/UI/4Levels/Btn_GoBack1_n.png
+- Assets/AssetsPackage/Demo/UI/4Levels/checkbox_select.png
+- Assets/AssetsPackage/Demo/UI/4Levels/bg_EnergyProgress bar.png
+- Assets/AssetsPackage/Demo/UI/4Levels/bg_LifeProgress bar.png
+- Assets/AssetsPackage/Demo/UI/4Levels/Btn_GoBack.png
+- Assets/AssetsPackage/Demo/UI/4Levels/Btn_Level1_n.png
+- Assets/AssetsPackage/Demo/UI/4Levels/Level star_Light.png
+- Assets/AssetsPackage/Demo/UI/4Levels/Btn_Level1_h.png
+- Assets/AssetsPackage/Demo/UI/4Levels/Btn_Level2_n.png
+- Assets/AssetsPackage/Demo/UI/4Levels/Btn_Level2_p.png
+- Assets/AssetsPackage/Demo/UI/4Levels/Icon_Settings.png
+- Assets/AssetsPackage/Demo/UI/4Levels/Btn_GoBack2_p.png
+- Assets/AssetsPackage/Demo/UI/4Levels/bg_RoleUp.png
+Dependencies: []

@@ -1,0 +1,25 @@
+ManifestFileVersion: 0
+CRC: 977972066
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: aaf419441b478570fb4df176b193f85e
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 9e6ad29cbd2df8fbe1a15315db0e51ab
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+Assets:
+- Assets/XAsset/Demo/UI/Components2/bg_Input_s.png
+- Assets/XAsset/Demo/UI/Components2/Btn_Login_n.png
+- Assets/XAsset/Demo/UI/Components2/Input_h.png
+- Assets/XAsset/Demo/UI/Components2/login bg.png
+- Assets/XAsset/Demo/UI/Components2/Btn_Login_h.png
+- Assets/XAsset/Demo/UI/Components2/bg_Login.png
+- Assets/XAsset/Demo/UI/Components2/bg_Input_n.png
+- Assets/XAsset/Demo/UI/Components2/Btn_Login_p.png
+Dependencies: []

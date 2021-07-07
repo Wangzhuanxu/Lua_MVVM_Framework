@@ -1,0 +1,38 @@
+ManifestFileVersion: 0
+CRC: 1414313751
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 3a165e769b67d229a04795a13a1ad261
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 9e6ad29cbd2df8fbe1a15315db0e51ab
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+Assets:
+- Assets/AssetsPackage/Demo/UI/5Login1/Window_Login.png
+- Assets/AssetsPackage/Demo/UI/5Login1/bg_Input0_s .png
+- Assets/AssetsPackage/Demo/UI/5Login1/bg_Input2_s.png
+- Assets/AssetsPackage/Demo/UI/5Login1/line.png
+- Assets/AssetsPackage/Demo/UI/5Login1/bg_Input1_n.png
+- Assets/AssetsPackage/Demo/UI/5Login1/close_normal.png
+- Assets/AssetsPackage/Demo/UI/5Login1/bg_Input2_n.png
+- Assets/AssetsPackage/Demo/UI/5Login1/Btn_LOGIN_h.png
+- Assets/AssetsPackage/Demo/UI/5Login1/close_pressed.png
+- Assets/AssetsPackage/Demo/UI/5Login1/checkbox_select.png
+- Assets/AssetsPackage/Demo/UI/5Login1/Icon_UserName1.png
+- Assets/AssetsPackage/Demo/UI/5Login1/Btn_LOGIN_n.png
+- Assets/AssetsPackage/Demo/UI/5Login1/Icon_Password1.png
+- Assets/AssetsPackage/Demo/UI/5Login1/bg_Input1_s .png
+- Assets/AssetsPackage/Demo/UI/5Login1/close_hover.png
+- Assets/AssetsPackage/Demo/UI/5Login1/Icon_UserName.png
+- Assets/AssetsPackage/Demo/UI/5Login1/checkbox_nul.png
+- Assets/AssetsPackage/Demo/UI/5Login1/Btn_LOGIN_p.png
+- Assets/AssetsPackage/Demo/UI/5Login1/Icon_Password.png
+- Assets/AssetsPackage/Demo/UI/5Login1/bg_Input0_n.png
+- Assets/AssetsPackage/Demo/UI/5Login1/bg_black.png
+Dependencies: []

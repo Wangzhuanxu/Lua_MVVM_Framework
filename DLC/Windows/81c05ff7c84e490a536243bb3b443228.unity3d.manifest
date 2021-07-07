@@ -1,0 +1,40 @@
+ManifestFileVersion: 0
+CRC: 2268549700
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 4b2e315ae169e49837931f5910b48317
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 9e6ad29cbd2df8fbe1a15315db0e51ab
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+Assets:
+- Assets/AssetsPackage/Demo/UI/16Victory1/Icon_Ring.png
+- Assets/AssetsPackage/Demo/UI/16Victory1/Btn_Next_h.png
+- Assets/AssetsPackage/Demo/UI/16Victory1/Btn_Next_n.png
+- Assets/AssetsPackage/Demo/UI/16Victory1/Icon_Shield.png
+- Assets/AssetsPackage/Demo/UI/16Victory1/bg_Victory2.png
+- Assets/AssetsPackage/Demo/UI/16Victory1/Light line.png
+- Assets/AssetsPackage/Demo/UI/16Victory1/Icon_SmallStar_Gray.png
+- Assets/AssetsPackage/Demo/UI/16Victory1/Btn_Restart_p.png
+- Assets/AssetsPackage/Demo/UI/16Victory1/Icon_Potion.png
+- Assets/AssetsPackage/Demo/UI/16Victory1/Icon_SmallStar_Light.png
+- Assets/AssetsPackage/Demo/UI/16Victory1/bg_Victory1.png
+- Assets/AssetsPackage/Demo/UI/16Victory1/bg_ProgressLv.png
+- Assets/AssetsPackage/Demo/UI/16Victory1/Lights1.png
+- Assets/AssetsPackage/Demo/UI/16Victory1/title_Victory.png
+- Assets/AssetsPackage/Demo/UI/16Victory1/Btn_Restart_h.png
+- Assets/AssetsPackage/Demo/UI/16Victory1/Icon_star1_gray.png
+- Assets/AssetsPackage/Demo/UI/16Victory1/Btn_Next_p.png
+- Assets/AssetsPackage/Demo/UI/16Victory1/bg_block.png
+- Assets/AssetsPackage/Demo/UI/16Victory1/Btn_Restart_n.png
+- Assets/AssetsPackage/Demo/UI/16Victory1/Icon_reward.png
+- Assets/AssetsPackage/Demo/UI/16Victory1/ProgressLv.png
+- Assets/AssetsPackage/Demo/UI/16Victory1/Lights2.png
+- Assets/AssetsPackage/Demo/UI/16Victory1/Icon_star1_light.png
+Dependencies: []

@@ -2,7 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PathConfig
+namespace Framework
 {
-    public const string AssetsFolderName = "AssetsPackage";
+    public class PathConfig
+    {
+        public const string AssetsFolderName = "AssetsPackage";
+        public static readonly string ManifestAsset = "Assets/Setting/Manifest.asset";
+        public static readonly string RulesAsset = "Assets/Setting/Rules.asset";
+    }
 }
+

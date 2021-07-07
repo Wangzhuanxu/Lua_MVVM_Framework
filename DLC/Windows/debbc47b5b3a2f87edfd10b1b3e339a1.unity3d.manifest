@@ -1,0 +1,20 @@
+ManifestFileVersion: 0
+CRC: 1247404941
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: bfb8c9e423887a7dd881ad578d87f1f7
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 9e6ad29cbd2df8fbe1a15315db0e51ab
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+Assets:
+- Assets/XAsset/Demo/UI/Components1/line02.png
+- Assets/XAsset/Demo/UI/Components1/line01.png
+- Assets/XAsset/Demo/UI/Components1/bg_LoadingPage.png
+Dependencies: []

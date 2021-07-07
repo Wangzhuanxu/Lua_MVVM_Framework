@@ -1,0 +1,40 @@
+ManifestFileVersion: 0
+CRC: 230998546
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: a16fd2fa2d0e9126c8719ccfbd7a3770
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 9e6ad29cbd2df8fbe1a15315db0e51ab
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+Assets:
+- Assets/AssetsPackage/Demo/UI/2MainMenu/Sci-fi Circle_Large Line.png
+- Assets/AssetsPackage/Demo/UI/2MainMenu/Sci-fi-Circle_Large1.png
+- Assets/AssetsPackage/Demo/UI/2MainMenu/Btn_MainMenu_n.png
+- Assets/AssetsPackage/Demo/UI/2MainMenu/Sci-fi-Circle_Large2.png
+- Assets/AssetsPackage/Demo/UI/2MainMenu/Icon_Recharge.png
+- Assets/AssetsPackage/Demo/UI/2MainMenu/bg_Title.png
+- Assets/AssetsPackage/Demo/UI/2MainMenu/Btn_User_n.png
+- Assets/AssetsPackage/Demo/UI/2MainMenu/Btn_Character_p.png
+- Assets/AssetsPackage/Demo/UI/2MainMenu/Btn_MainMenu_h.png
+- Assets/AssetsPackage/Demo/UI/2MainMenu/Btn_User_h.png
+- Assets/AssetsPackage/Demo/UI/2MainMenu/Sci-fi-Circle_Large4.png
+- Assets/AssetsPackage/Demo/UI/2MainMenu/Icon_Ranking.png
+- Assets/AssetsPackage/Demo/UI/2MainMenu/Sci-fi-Circle_Large3.png
+- Assets/AssetsPackage/Demo/UI/2MainMenu/bg_Title1.png
+- Assets/AssetsPackage/Demo/UI/2MainMenu/Btn_Character_n.png
+- Assets/AssetsPackage/Demo/UI/2MainMenu/Sci-fi Circle_Large stars.png
+- Assets/AssetsPackage/Demo/UI/2MainMenu/Icon_Shop.png
+- Assets/AssetsPackage/Demo/UI/2MainMenu/Icon_User.png
+- Assets/AssetsPackage/Demo/UI/2MainMenu/Btn_Character_h.png
+- Assets/AssetsPackage/Demo/UI/2MainMenu/Btn_MainMenu_p.png
+- Assets/AssetsPackage/Demo/UI/2MainMenu/bg_Title2 .png
+- Assets/AssetsPackage/Demo/UI/2MainMenu/Btn_User_p.png
+- Assets/AssetsPackage/Demo/UI/2MainMenu/Icon_Character.png
+Dependencies: []

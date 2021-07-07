@@ -182,15 +182,15 @@ namespace Framework
             return GameUtility.SafeReadAllBytes(luaPath);
 #else
 
-            var luaAddress = scriptPath.Append(".bytes").ToString();
-    
-            var asset = AddressablesManager.Instance.GetLuaCache(luaAddress) ;
-            if (asset != null)
-            {
-                Logger.Log("Load lua script : " + scriptPath);
-                return asset.bytes;
-            }
-            Logger.LogError("Load lua script failed : " + scriptPath + ", You should preload lua assetbundle first!!!");
+            // var luaAddress = scriptPath.Append(".bytes").ToString();
+            //
+            // var asset = AddressablesManager.Instance.GetLuaCache(luaAddress) ;
+            // if (asset != null)
+            // {
+            //     Logger.Log("Load lua script : " + scriptPath);
+            //     return asset.bytes;
+            // }
+            // Logger.LogError("Load lua script failed : " + scriptPath + ", You should preload lua assetbundle first!!!");
             return null;
 #endif
         }

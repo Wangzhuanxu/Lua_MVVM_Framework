@@ -17,8 +17,9 @@ namespace Game
             // Logger.Log("Load lua script : " + luaPath);
             return GameUtility.SafeReadAllBytes(luaPath);
 #else
-            --assetbundle
+            //assetbundle
 #endif
+            return null;
         }
     }
 }

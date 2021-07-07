@@ -1,0 +1,19 @@
+ManifestFileVersion: 0
+CRC: 1363219962
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 172a55026331df13597f83be815f8571
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 9e6ad29cbd2df8fbe1a15315db0e51ab
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+Assets:
+- Assets/XAsset/Demo/UI/17Victory2/bg_Victory.png
+- Assets/XAsset/Demo/UI/17Victory2/VICTORY.png
+Dependencies: []

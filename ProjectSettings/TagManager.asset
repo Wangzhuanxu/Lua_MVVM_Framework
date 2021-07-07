@@ -47,6 +47,9 @@ TagManager:
   - name: normal
     uniqueID: 501677365
     locked: 0
+  - name: messagebox_unity
+    uniqueID: 2543775247
+    locked: 0
   - name: toast
     uniqueID: 871155283
     locked: 0
